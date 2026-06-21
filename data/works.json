@@ -1,16 +1,11 @@
-{
-  "works": [
-    {
-      "src": "/images/works/0919.jpg",
-      "cat": "character",
-      "id": "",
-      "feature": false
-    },
-    {
-      "src": "/images/works/0920.jpg",
-      "cat": "character",
-      "id": "",
-      "feature": false
-    }
-  ]
-}
+[
+  {"src":"/images/character/0919.jpg","cat":"character","id":"","feature":false},
+  {"src":"/images/character/0920.jpg","cat":"character","id":"","feature":false},
+  {"src":"/images/character/0927.jpg","cat":"character","id":"","feature":false},
+  {"src":"/images/character/1015.png","cat":"character","id":"","feature":false},
+  {"src":"/images/character/1106.png","cat":"character","id":"","feature":false},
+  {"src":"/images/character/1114.png","cat":"character","id":"","feature":false},
+  {"src":"/images/character/draft.png","cat":"character","id":"","feature":false},
+  {"src":"/images/character/costume.png","cat":"character","id":"","feature":false},
+  {"src":"/images/character/charsheet.png","cat":"character","id":"","feature":false}
+]
