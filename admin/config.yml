@@ -39,7 +39,6 @@ collections:
                 default: illust
                 options:
                   - { label: 角色设计, value: character }
-                  - { label: 场景设计, value: scene }
                   - { label: 插画,     value: illust }
                   - { label: 速涂草图, value: sketch }
               - { name: id, label: 标题或编号（可留空）, widget: string, required: false }
