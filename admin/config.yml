@@ -1,0 +1,69 @@
+# ===========================================================
+#  后台内容配置（Sveltia CMS，兼容 Decap CMS）
+#  —— 部署前需要改的只有下面 backend 里的两行（见 ← 标注）
+# ===========================================================
+
+backend:
+  name: github
+  repo: 你的GitHub用户名/你的仓库名     # ←① 改成你的，例如 haiyaoyuan/portfolio
+  branch: main
+  # ←② 用 Cloudflare Worker 登录时填它的网址；若用「个人令牌(PAT)」登录可整行删掉
+  base_url: https://sveltia-cms-auth.你的子域.workers.dev
+
+# 上传的图片存到这个文件夹；网页里用 /images/works/... 引用
+media_folder: "images/works"
+public_folder: "/images/works"
+
+locale: zh_Hans
+
+collections:
+  # ——— 作品（朋友最常用：加图、改分类就在这里）———
+  - name: gallery
+    label: 作品集
+    files:
+      - name: works
+        label: 作品列表
+        file: data/works.json
+        format: json
+        fields:
+          - name: works
+            label: 作品
+            label_singular: 一张作品
+            widget: list
+            summary: "{{fields.cat}} · {{fields.id}}"
+            fields:
+              - { name: src, label: 图片, widget: image }
+              - name: cat
+                label: 分类
+                widget: select
+                default: illust
+                options:
+                  - { label: 角色设计, value: character }
+                  - { label: 场景设计, value: scene }
+                  - { label: 插画,     value: illust }
+                  - { label: 速涂草图, value: sketch }
+              - { name: id, label: 标题或编号（可留空）, widget: string, required: false }
+              - { name: feature, label: 设为重点横幅（独占整行、放更大）, widget: boolean, default: false, required: false }
+
+  # ——— 首页设置 ———
+  - name: settings
+    label: 网站设置
+    files:
+      - name: site
+        label: 首页大图
+        file: data/site.json
+        format: json
+        fields:
+          - { name: hero, label: 首页背景大图, widget: image }
+          - { name: favicon, label: 网页图标（浏览器标签页小图标，建议正方形 PNG）, widget: image, required: false }
+      - name: featured
+        label: 精选横幅（首页开头的大图，建议放最得意的横幅/代表作）
+        file: data/featured.json
+        format: json
+        fields:
+          - name: featured
+            label: 精选作品
+            label_singular: 一张精选
+            widget: list
+            fields:
+              - { name: src, label: 图片, widget: image }

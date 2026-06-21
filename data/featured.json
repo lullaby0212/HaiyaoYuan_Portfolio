@@ -1,0 +1,9 @@
+{
+  "featured": [
+    { "src": "images/featured/f1.jpg" },
+    { "src": "images/featured/f2.jpg" },
+    { "src": "images/featured/f5.jpg" },
+    { "src": "images/featured/f6.jpg" },
+    { "src": "images/featured/f7.jpg" }
+  ]
+}
