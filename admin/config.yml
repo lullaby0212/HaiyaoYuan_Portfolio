@@ -5,10 +5,10 @@
 
 backend:
   name: github
-  repo: 你的GitHub用户名/你的仓库名     # ←① 改成你的，例如 haiyaoyuan/portfolio
+  repo: lullaby0212/HaiyaoYuan_Portfolio     # ←① 改成你的，例如 haiyaoyuan/portfolio
   branch: main
   # ←② 用 Cloudflare Worker 登录时填它的网址；若用「个人令牌(PAT)」登录可整行删掉
-  base_url: https://sveltia-cms-auth.你的子域.workers.dev
+  base_url: https://sveltia-cms-auth.jyang021212.workers.dev
 
 # 上传的图片存到这个文件夹；网页里用 /images/works/... 引用
 media_folder: "images/works"
